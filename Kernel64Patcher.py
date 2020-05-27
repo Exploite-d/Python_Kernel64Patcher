@@ -33,7 +33,7 @@ if args.amfi11:
 	kernel_file = open("./kernel.inprogress", "r+b")
 	fh = kernel_file
 	file = fh.read()
-	hex_value = hex(file.index(b"\xF8\x5F\xBC\xA9\xF6\x57\x01\xA9\xF4\x4F\x02\xA9\xFD")) #Finding pattern
+	hex_value = hex(file.index(b"\xF8\x5F\xBC\xA9\xF6\x57\x01\xA9\xF4")) #Finding pattern
 	hex_value = int(hex_value, 0)
 	fh.seek(hex_value, 0)
 	fh.write(b"\xE0\x03\x00\x32\xC0\x03\x5F\xD6") #Applying AMFI patch
@@ -43,7 +43,7 @@ if args.amfi12:
 	kernel_file = open("./kernel.inprogress", "r+b")
 	fh = kernel_file
 	file = fh.read()
-	hex_value = hex(file.index(b"\xFD\x7B\xBF\xA9\xFD\x03\x00\x91\x02\x9B\xE6\x97\x1F")) #Finding pattern
+	hex_value = hex(file.index(b"\xFD\x7B\xBF\xA9\xFD\x03\x00\x91\x02")) #Finding pattern
 	hex_value = int(hex_value, 0)
 	fh.seek(hex_value, 0)
 	fh.write(b"\xE0\x03\x00\x32\xC0\x03\x5F\xD6") #Applying AMFI patch
@@ -53,7 +53,7 @@ if args.amfi13:
 	kernel_file = open("./kernel.inprogress", "r+b")
 	fh = kernel_file
 	file = fh.read()
-	hex_value = hex(file.index(b"\xFD\x7B\xBF\xA9\xFD\x03\x00\x91\xD9\x15\x00\x94\xFD")) #Finding pattern
+	hex_value = hex(file.index(b"\xFD\x7B\xBF\xA9\xFD\x03\x00\x91\xD9")) #Finding pattern
 	hex_value = int(hex_value, 0)
 	fh.seek(hex_value, 0)
 	fh.write(b"\xE0\x03\x00\x32\xC0\x03\x5F\xD6") #Applying AMFI patch
